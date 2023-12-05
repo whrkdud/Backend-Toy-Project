@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♥ 조가비 commuity ♥</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.jpg" type="image/x-icon">
+    <style>
+        * {
+            /* border: 1px solid black; */
+            font-family: 'Gasoek One', sans-serif;
+            font-family: 'Single Day', cursive;
+            color: pink;
+            text-align: center;
+        }
+        body {
+            padding: 1vw 1.5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+        }
+        header > div {
+            margin: 0 0.5vh;
+        }
+        header > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url("img/profileTest.jpg");
+            background-size: contain ;
+        }
+        header > div:nth-child(1) * {
+            margin: 0.5vw 1.5vh;
+        }
+        header > div:nth-child(1) img {
+            width: 10vw;
+            height: 20vh;
+        }
+        header > div:nth-child(1) h3 {
+            width: 11vw;
+        }
+        header > div:nth-child(1) button {
+            width: 5.5vw;
+            height: 4vh;
+            margin: 0.2vw auto;
+            margin-bottom: 1vw;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+        }
+        header > div:nth-child(2) {
+            background-image: url("img/headerTest.jpg");
+            width: 100%;
+            cursor: pointer;;
+        }
+        main {
+            height: fit-content;
+            display: flex;
+            margin: 1vw 0 0 0;
+            background-image: url("img/boardBackground.jpg");
+        }
+        section {
+            margin: 1vw 1.5vh;
+            background-image: url("img/section.jpg");
+            width: 50vw;
+            height: fit-content;
+            padding: 0.5vw 1vh; 
+        }
+        section:nth-child(1) > div:nth-child(1),
+        section:nth-child(2) > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding: 0 2vh;
+        }
+        section:nth-child(1) > div:nth-child(1) *,
+        section:nth-child(2) > div:nth-child(1) * {
+            margin: 0.5vw 0;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        section:nth-child(1) {
+            display: flex;
+        }
+        section:nth-child(1) > div:nth-child(2) {
+            padding: 0.5vw 1vh;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            align-items: center;
+        }
+        section:nth-child(1) > div:nth-child(2) > div:nth-child(1) button {
+            width: 5vw;
+            height: 5vh;
+            margin: 0 auto;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+        }
+        section:nth-child(1) > div:nth-child(2) table {
+            width: 100%;
+            margin: 1vw 0 0 0;
+            background-color: pink;
+            border: 1px solid pink;
+        }
+        section:nth-child(1) > div:nth-child(2) table button {
+            border: none;
+            cursor: pointer;
+        }
+        section:nth-child(1) > div:nth-child(2) table td, 
+        section:nth-child(2) > div:nth-child(2) table td {
+            font-size: large;
+            padding: 0.5vw 0;
+        }
+        section:nth-child(1) > div:nth-child(2) table td {
+            color:white;
+            border: 1px dashed white;
+            border-left: none;
+            border-right: none;
+        }
+        section:nth-child(2) > div:nth-child(2) table td {
+            color: white;
+            border: 1px dashed white;
+            border-left: none;
+            border-right: none;
+        }
+        textarea {
+            outline: none;
+            resize: none;
+            border: 5px dashed pink;
+            color: gray;
+            text-align: left;
+            padding: 0.5vw 1vh;
+            width: 80%;
+            height: 20%;
+            font-size: large;
+        }
+        textarea::placeholder {
+            color: lightgray;
+        }
+        textarea:focus::-webkit-input-placeholder { 
+            color:transparent;
+        }
+        section:nth-child(2) {
+            display: flex;
+        }
+        section:nth-child(2) > div:nth-child(2) {
+            padding: 0.5vw 1vh;
+            width: 100%;
+        }
+        section:nth-child(2) > div:nth-child(2) table {
+            width: 100%;
+            border: 1px solid thistle;
+            background-color: thistle;
+        }
+        section:nth-child(2) > div:nth-child(2) table a {
+            text-decoration: none;
+            color: white;
+        }
+        #page {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            padding: 1vw 0 0 0;
+        }
+        #page * {
+            margin: 0 1vh;
+            color: thistle;
+            text-decoration: none;
+            font-size: large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/profile.jpg">
+            <h3>★ 방 장 : 조 가 비 ★</h2>
+            <button id="write" type="button">글 쓰 기</button>
+            <button  id="logout" type="button">로 그 아 웃</button>
+        </div>
+
+        <div></div>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h2>&heartsuit;</h2>
+                <h2>방</h2>
+                <h2>명</h2>
+                <h2>록</h2>
+                <h2>&heartsuit;</h2>
+            </div>
+            <div>
+                <div>
+                    <form action="/main" method="post">
+                        <textarea name="comment" placeholder="방명록을 남겨주세요."></textarea>
+                        <input name="memberName" type="hidden" th:value="${session.member.memberName}">
+                        <button type="submit">등 록</button>
+                    </form>
+                </div>
+                <div>
+                    <table>
+                        <div th:each="data : ${visit}">
+                            <tr>
+                                <td th:text="${data.visitComment}"></td>
+                                <td th:text="${data.visitwriter}"></td>
+                                <td th:text="${data.visitWriteDate}"></td>
+                                <!-- <td>
+                                    <form action="/visitdelete" method="post" th:if="${session.member.memberName}==${data.visitwriter}">
+                                        <input type="hidden" name="visitSeq" th:value="${data.visitSeq}">
+                                        <button type="submit">X</button>
+                                    </form>
+                                </td> --> <!-- 방명록 삭제를 구현하려했는데 값을 자꾸 못받아와서 실패했습니다...ㅠ -->
+                            </tr>
+                        </div>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>&heartsuit;</h2>
+                <h2>게</h2>
+                <h2>시</h2>
+                <h2>판</h2>
+                <h2>&heartsuit;</h2>
+            </div>
+            <div>
+                <table>
+                    <div th:each="boardData : ${board}">
+                        <tr>
+                            <td>&starf;</td>
+                            <td><a th:href="@{/post(boardSeq=${boardData.boardSeq})}">[[${boardData.boardTitle}]]</a></td>
+                            <td th:text="${boardData.boardWriter}"></td>
+                            <td th:text="${boardData.boardWriteDate}"></td>
+                            <!-- <td th:text="${boardData.boardCnt}"></td> --> <!-- 조회수 구현 실패ㅠ...-->
+                        </tr>
+                    </div>
+                </table>
+                <div id="page">
+                    <th:block th:each="pageNumber : ${#numbers.sequence(1,10)}">
+                        <a th:href="@{/main(page=${pageNumber})}" th:text="${pageNumber}"></a>
+                    </th:block>
+                </div> <!-- 게시글이 일정 개수를 넘어가면 다음 페이지로 넘기게 하려 했는데 실패했습니다... ㅠ -->
+            </div>
+        </section>
+    </main>
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+    <script>
+        document.querySelector("header > div:nth-child(2)").addEventListener("click", function() {
+        location.href = "http://localhost/main";
+        });
+        document.querySelector("#write").addEventListener("click", function() {
+            location.href = "http://localhost/posting";
+        })
+        document.querySelector("#logout").addEventListener("click", function() {
+            location.href = "http://localhost/login";
+        })
+    </script>
+</body>
+</html>

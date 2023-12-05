@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♥ 조가비 commuity ♥</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.jpg" type="image/x-icon">
+    <style>
+        * {
+            /* border: 1px solid black; */
+            font-family: 'Gasoek One', sans-serif;
+            font-family: 'Single Day', cursive;
+            color: pink;
+            text-align: center;
+        }
+        body {
+            padding: 1vw 1.5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+        }
+        header > div {
+            margin: 0 0.5vh;
+        }
+        header > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url("img/profileTest.jpg");
+            background-size: contain ;
+        }
+        header > div:nth-child(1) * {
+            margin: 0.5vw 1.5vh;
+        }
+        header > div:nth-child(1) img {
+            width: 10vw;
+            height: 20vh;
+        }
+        header > div:nth-child(1) h3 {
+            width: 11vw;
+        }
+        header > div:nth-child(1) button {
+            width: 5.5vw;
+            height: 4vh;
+            margin: 0.2vw auto;
+            margin-bottom: 1vw;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+        }
+        header > div:nth-child(2) {
+            background-image: url("img/headerTest.jpg");
+            width: 100%;
+            cursor: pointer;;
+        }
+        main {
+            height: 100vh;
+            display: flex;
+            margin: 1vw 0 0 0;
+            background-image: url("img/boardBackground.jpg");
+            justify-content: center;
+            align-items: center;
+        }
+        main > div {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 90%;
+        }
+        input, 
+        textarea {
+            padding: 1vw 2.5vh;
+        }
+        input {
+            outline: none;
+            color: gray;
+            border: 5px dashed pink;
+            height: 7vh;
+            font-size: 30px;
+            text-align: left;
+            font-weight: bold;
+        }
+        input:focus::-webkit-input-placeholder,
+        textarea:focus::-webkit-input-placeholder { 
+            color:transparent;
+        }
+        input::-webkit-input-placeholder {
+            color: lightgray;
+        }
+        textarea {
+            outline: none;
+            resize: none;
+            border: 5px dashed pink;
+            border-top: none;
+            height: 100%;
+            color: gray;
+            text-align: left;
+            font-size: 25px;
+        }
+        textarea::placeholder {
+            color: lightgray;
+        }
+        form button {
+            width: 10vw;
+            height: 5vh;
+            margin: 0.5vw auto;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <div>
+            <img src="img/profile.jpg">
+            <h3>★ 방 장 : 조 가 비 ★</h2>
+                <button id="write" type="button">글 쓰 기</button>
+                <button  id="logout" type="button">로 그 아 웃</button>
+        </div>
+
+        <div></div>
+    </header>
+
+    <main>
+        <div>
+            <form action="/postupdate" method="post">
+                <input name="boardTitle" type="text" th:value="${board.boardTitle}" placeholder="제 목">
+                <textarea name="boardContent" th:field="${board.boardContent}" placeholder="내 용"></textarea>
+                <input name="memberName" type="hidden" th:value="${session.member.memberName}">
+                <input type="hidden" name="boardSeq" th:value="${board.boardSeq}">
+                <button type="submit">등 록</button>
+            </form>
+        </div>
+    </main>
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+    <script>
+        document.querySelector("header > div:nth-child(2)").addEventListener("click", function() {
+        location.href = "http://localhost/main";
+        });
+        document.querySelector("#write").addEventListener("click", function() {
+            location.href = "http://localhost/posting";
+        })
+        document.querySelector("#logout").addEventListener("click", function() {
+            location.href = "http://localhost/login";
+        })
+    </script>
+</body>
+</html>

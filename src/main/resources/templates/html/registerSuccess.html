@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♥ 조가비 commuity ♥</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/favicon.jpg" type="image/x-icon">
+    <style>
+        * {
+            /* border: 1px solid black; */
+            font-family: 'Gasoek One', sans-serif;
+            font-family: 'Single Day', cursive;
+            color: pink;
+            text-align: center;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img, 
+        img ~ div {
+            margin: 0 1vh;
+        }
+        img {
+            width: 25vw;
+            height: 90vh;
+        }
+        h2 {
+            color: lightgray;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            width: 10vw;
+            height: 5vh;
+            margin: 0.2vw auto;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="/img/login.jpg">
+
+    <div>
+        <h1>♥ 조 가 비 C O M M U N I T Y ♥</h1>
+        <h2>"회원가입이 정상적으로 완료되었습니다."</h2>
+        <button type="button">처 음 으 로</button>
+    </div>
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+    <script>
+        document.querySelector("button").addEventListener("click", function() {
+            location.href = "http://localhost/login";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♥ 조가비 commuity ♥</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.jpg" type="image/x-icon">
+    <style>
+        * {
+            /* border: 1px solid black; */
+            font-family: 'Gasoek One', sans-serif;
+            font-family: 'Single Day', cursive;
+            color: pink;
+            text-align: center;
+        }
+        body {
+            padding: 1vw 1.5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+        }
+        header > div {
+            margin: 0 0.5vh;
+        }
+        header > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url("img/profileTest.jpg");
+            background-size: contain ;
+        }
+        header > div:nth-child(1) * {
+            margin: 0.5vw 1.5vh;
+        }
+        header > div:nth-child(1) img {
+            width: 10vw;
+            height: 20vh;
+        }
+        header > div:nth-child(1) h3 {
+            width: 11vw;
+        }
+        header > div:nth-child(1) button {
+            width: 5.5vw;
+            height: 4vh;
+            margin: 0.2vw auto;
+            margin-bottom: 1vw;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+        }
+        header > div:nth-child(2) {
+            background-image: url("img/headerTest.jpg");
+            width: 100%;
+            cursor: pointer;;
+        }
+        main {
+            height: fit-content;
+            display: flex;
+            margin: 1vw 0 0 0;
+            background-image: url("img/boardBackground.jpg");
+        }
+        section {
+            margin: 1vw 1.5vh;
+            background-image: url("img/section.jpg");
+            width: 50vw;
+            height: fit-content;
+            padding: 0.5vw 1vh; 
+        }
+        section:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vw 2vh;
+        }
+        section:nth-child(1) > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+        }
+        section:nth-child(1) > div:nth-child(1) {
+            border: 3px dashed pink;
+        }
+        section:nth-child(1) > div:nth-child(1) > * {
+            margin: 0;
+            padding: 0.5vw 1vh;
+            height: fit-content;
+        }
+        section:nth-child(1) > div:nth-child(1) div {
+            display: flex;
+        }
+        #three {
+            justify-content: left;
+        }
+        #three h4 {
+            margin: 0 0.5vh;
+        }
+        section:nth-child(1) > div:nth-child(1) > h1, 
+        section:nth-child(1) > div:nth-child(1) > h3 {
+            padding: 0.5vw 1vh;
+            height: fit-content;
+            color: thistle;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        section:nth-child(1) > div:nth-child(1) > h3 {
+            font-size: 25px;
+        }
+        #btt {
+            width: 100%;
+            padding: 0;
+            border-bottom: 0;
+        }
+        section:nth-child(1) > div:nth-child(2) {
+            display: flex;
+            justify-content: right;
+        }
+        #btt > form button {
+            width: 5vw;
+            height: 3.5vh;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+            margin: 0.5vw 1vh;
+        }
+        section:nth-child(2) > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding: 0 2vh;
+        }
+        section:nth-child(2) > div:nth-child(1) * {
+            margin: 0.5vw 0;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        section:nth-child(2) {
+            display: flex;
+        }
+        section:nth-child(2) > div:nth-child(2) {
+            padding: 0.5vw 1vh;
+            width: 100%;
+        }
+        section:nth-child(2) form {
+            display: flex;
+            align-items: center;
+        }
+        section:nth-child(2) > div:nth-child(2) > div:nth-child(1) button {
+            width: 5vw;
+            height: 5vh;
+            margin: 0 auto;
+            border: 1px solid thistle;
+            background-color: thistle;
+            color : white;
+            cursor: pointer;
+        }
+        section:nth-child(2) > div:nth-child(2) table {
+            width: 100%;
+            margin: 1vw 0 0 0;
+            background-color: pink;
+            border: 1px solid pink;
+        }
+        section:nth-child(2) > div:nth-child(2) table td{
+            font-size: large;
+            padding: 0.5vw 0;
+        }
+        section:nth-child(2) > div:nth-child(2) table td {
+            color:white;
+            border: 1px dashed white;
+            border-left: none;
+            border-right: none;
+        }
+        textarea {
+            outline: none;
+            resize: none;
+            border: 5px dashed pink;
+            color: gray;
+            text-align: left;
+            padding: 0.5vw 1vh;
+            width: 80%;
+            height: 20%;
+            font-size: large;
+        }
+        textarea::placeholder {
+            color: lightgray;
+        }
+        textarea:focus::-webkit-input-placeholder { 
+            color:transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/profile.jpg">
+            <h3>★ 방 장 : 조 가 비 ★</h2>
+                <button id="write" type="button">글 쓰 기</button>
+                <button  id="logout" type="button">로 그 아 웃</button>
+        </div>
+
+        <div></div>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h1>[[${board.boardTitle}]]</h1>
+                <div id="three">
+                    <h4>작성자 :&nbsp;[[${board.boardWriter}]]&nbsp;&nbsp;|</h4>
+                    <div>
+                        <h4>작성일 :&nbsp;[[${board.boardWriteDate}]]</h4>
+                        <!-- <h4>조회수 :&nbsp;[[${board.boardCnt}]]</h4> --> <!-- 조회수 구현 실패ㅠ...-->
+                    </div>
+                </div>
+                <h3>[[${board.boardContent}]]</h3>
+            </div>
+            <div id="btt" th:if="${session.member.memberName}==${board.boardWriter}">
+                <form action="/update" method="post">
+                    <input type="hidden" name="boardSeq" th:value="${board.boardSeq}">
+                    <button type="submit">수 정</button>
+                </form>
+                <form action="/postdelete" method="post">
+                    <input type="hidden" name="boardSeq" th:value="${board.boardSeq}">
+                    <button type="submit">삭 제</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>&heartsuit;</h2>
+                <h2>댓</h2>
+                <h2>글</h2>
+                <h2>&heartsuit;</h2>
+            </div>
+            <div>
+                <div>
+                    <form action="/post" method="post">
+                        <textarea name="postCommentComment" placeholder="댓글을 남겨주세요."></textarea>
+                        <input name="memberName" type="hidden" th:value="${session.member.memberName}">
+                        <input name="boardSeq" type="hidden" th:value="${board.boardSeq}">
+                        <button type="submit">등 록</button>
+                    </form>
+                </div>
+                <div>
+                    <table>
+                        <div th:each="postCommentData : ${postComment}" th:if="${postCommentData.boardSeq} == ${board.boardSeq}">
+                            <tr>
+                                <td th:text="${postCommentData.PostCommentComment}"></td>
+                                <td th:text="${postCommentData.PostCommentWriter}"></td>
+                                <td th:text="${postCommentData.PostCommentWriteDate}"></td>
+                            </tr>
+                        </div>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+    <script>
+        document.querySelector("header > div:nth-child(2)").addEventListener("click", function() {
+        location.href = "http://localhost/main";
+        });
+        document.querySelector("#write").addEventListener("click", function() {
+            location.href = "http://localhost/posting";
+        })
+        document.querySelector("#logout").addEventListener("click", function() {
+            location.href = "http://localhost/login";
+        })
+    </script>
+</body>
+</html>
